@@ -8,6 +8,6 @@ t_i(x) = travel time from traveler i to candidate location x
 N = number of participants
 
 TODOS:
-- [] Get API set up
-- [] Implement MAD(t_i(x)) in place of pstdev
-- [] Set alpha and beta parameters
+- Get API set up
+- Implement MAD(t_i(x)) in place of pstdev
+- Set alpha and beta parameters
