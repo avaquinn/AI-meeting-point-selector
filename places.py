@@ -69,19 +69,3 @@ def find_places(query="coffee shops in San Luis Obispo, CA", max_results=10):
         })
 
     return candidates
-
-
-def main():
-    candidates = find_places()
-
-    print(f"Found {len(candidates)} candidate locations:\n")
-
-    for candidate in candidates:
-        print(candidate["name"])
-        print(f"  Place ID: {candidate['id']}")
-        print(f"  Location: {candidate['location']}")
-        print()
-
-
-if __name__ == "__main__":
-    main()
