@@ -39,14 +39,18 @@ The algorithm supports limiting the number of evaluated candidates to reduce API
 
 ```text
 AI-meeting-point-selector/
-├── app.py             # Flask web application
-├── places.py          # Google Places API integration
-├── routes.py          # Google Routes API integration
-├── search.py          # Greedy best-first search
-├── selector.py        # Weighted objective function
-├── requirements.txt   # Python dependencies
-├── .env.example       # Example environment configuration
-├── .env               # Local API key (not committed)
+├── app.py
+├── places.py
+├── routes.py
+├── search.py
+├── selector.py
+├── tests/
+│   ├── test_places.py
+│   ├── test_routes.py
+│   └── test_geocoding.py
+├── requirements.txt
+├── .env
+├── .env.example
 ├── .gitignore
 └── README.md
 ```
@@ -98,6 +102,21 @@ Create an API key under **APIs & Services → Credentials**.
 Ensure the API key is authorized to access all three services and that the APIs are enabled in the project.
 
 **Note:** Google Maps Platform uses usage-based billing. Set appropriate API quotas and billing alerts to control costs. Billing alerts alone do not automatically stop charges.
+
+#### API Tests
+
+The `tests/` directory contains standalone scripts for verifying
+Google Maps API functionality.
+
+- `test_places.py` — Tests candidate location searches.
+- `test_routes.py` — Tests driving-time and distance calculations.
+- `test_geocoding.py` — Tests address-to-coordinate conversion.
+
+Run tests individually using:
+
+python3 tests/test_places.py  
+python3 tests/test_routes.py  
+python3 tests/test_geocoding.py  
 
 ### 4. Configure environment variables
 
