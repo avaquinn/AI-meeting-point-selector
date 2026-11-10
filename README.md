@@ -39,18 +39,18 @@ The algorithm supports limiting the number of evaluated candidates to reduce API
 
 ```text
 AI-meeting-point-selector/
-├── app.py
-├── places.py
-├── routes.py
-├── search.py
-├── selector.py
-├── tests/
+├── app.py             # Flask web application
+├── places.py          # Google Places API integration
+├── routes.py          # Google Routes API integration
+├── search.py          # Greedy best-first search
+├── selector.py        # Weighted objective function
+├── tests/             # Test APIs
 │   ├── test_places.py
 │   ├── test_routes.py
 │   └── test_geocoding.py
-├── requirements.txt
-├── .env
-├── .env.example
+├── requirements.txt   # Python dependencies
+├── .env.example       # Example environment configuration
+├── .env               # Local API key (not committed)
 ├── .gitignore
 └── README.md
 ```
